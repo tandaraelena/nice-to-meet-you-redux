@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import Test from '../testArea/test-component';
 
 function App() {
   return (
     <div className="App">
       <h1>The start!</h1>
+      <Test/>
     </div>
   );
 }
