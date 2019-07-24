@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { incrementCounter, decrementCounter } from './test.actions';
 
 const mapStateToProps = (state) => ({
-  data: state.data,
+  data: state.test.data, // test pt ca in rootReducer prop e denumita state
   bla: 'bla'
 })
 
