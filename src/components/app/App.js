@@ -1,12 +1,13 @@
 import React from 'react';
-import Test from '../testArea/test-component';
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h1>The start!</h1>
-      <Test/>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <h1>The start!</h1>
+      </div>
+    </BrowserRouter>
   );
 }
 
