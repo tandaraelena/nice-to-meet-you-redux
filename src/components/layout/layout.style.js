@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import SignedInLinks from './sign-in';
 
 export const NavbarStyled = styled.div`
   width: 100%;
