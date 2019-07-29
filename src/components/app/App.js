@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom'
+import Navbar from '../layout/navbar';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>The start!</h1>
+        <Navbar/>
       </div>
     </BrowserRouter>
   );
