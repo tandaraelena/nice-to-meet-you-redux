@@ -16,20 +16,18 @@ class SignIn extends Component {
   }
   render() {
     return (
-      <div className='container' style={{}} >
+      <div className='container' >
         <form onSubmit={this.handleSubmit} className='white'>
         <h5>Sign In</h5>
         <div className='input-field'>
           <label htmlFor='email'>Email</label>
-            <input type='email' id='email' onChange={this.handleChange} />
+          <input type='email' id='email' onChange={this.handleChange} />
         </div>
         <div className='input-field'>
           <label htmlFor='password'>Password</label>
-            <input type='password' id='password' onChange={this.handleChange} />
+          <input type='password' id='password' onChange={this.handleChange} />
         </div >
-        <div className='input-field'>
           <button>Login</button>
-        </div>
         </form>
       </div>
     )
