@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import testReducer from '../../testArea/testReducer';
+import authReducer from './auth-reducer'
+import dayReducer from './day-reducer'
 
 const rootReducer = combineReducers({
-  test: testReducer
+  authReducer: authReducer,
+  dayReducer: dayReducer,
 })
 
 export default rootReducer
