@@ -3,8 +3,8 @@ import authReducer from './auth-reducer'
 import dayReducer from './day-reducer'
 
 const rootReducer = combineReducers({
-  authReducer: authReducer,
-  dayReducer: dayReducer,
+  auth: authReducer,
+  day: dayReducer,
 })
 
 export default rootReducer
