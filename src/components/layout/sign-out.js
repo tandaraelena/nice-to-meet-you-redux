@@ -5,8 +5,8 @@ import { SignedInLinksStyled } from './layout.style';
 const SingOutLinks = () => {
   return (
     <SignedInLinksStyled>
-      <NavLink to='/' >SignUp</NavLink>
-      <NavLink to='/' >LogIn</NavLink>
+      <NavLink to='/sign-up' >SignUp</NavLink>
+      <NavLink to='/sign-in' >LogIn</NavLink>
     </SignedInLinksStyled>
   )
 }

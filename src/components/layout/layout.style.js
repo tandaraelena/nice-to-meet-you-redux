@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const NavbarStyled = styled.div`
   width: 100%;
   /* height: 20px; */
-  background-color: grey;
+  background-color: black;
   display: flex;
   a {
     color: white;

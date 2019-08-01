@@ -3,4 +3,18 @@ body {
   font-family: 'Times New Roman', Times, serif;
   box-sizing: border-box;
   padding: 0;
+  background: url('/img/5957908fe6d9740.jpg');
+  min-height: 100%;
+}
+form {
+  padding: 5px 25px 15px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-color: blue;
+  box-shadow: none;
 }
