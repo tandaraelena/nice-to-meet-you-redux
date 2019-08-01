@@ -1,20 +1,14 @@
 import React from 'react'
+import DayItem from './day-item'
 
-const DaysList = () => {
+const DaysList = ({ days }) => {
   return (
-    <div className='days-wrapper'>
-      <div className='day-item'>
-        <span>Day #1</span>
-        <span>Day Description</span>
-      </div>
-      <div className='day-item'>
-        <span>Day #1</span>
-        <span>Day Description</span>
-      </div>
-      <div className='day-item'>
-        <span>Day #1</span>
-        <span>Day Description</span>
-      </div>
+    <div >
+      {days && days.map(day => {
+        return (
+          <DayItem day={day} key={day.id}/>
+        )}
+      )}
     </div>
   )
 }
