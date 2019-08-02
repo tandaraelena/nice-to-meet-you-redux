@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import createDay from '../app/store/actions/days-actions'
+import { connect } from 'react-redux'
+
 
 class CreateDay extends Component {
   state = {
@@ -12,7 +15,8 @@ class CreateDay extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state)
+    this.props.createDay(this.state)
+    // console.log(this.state)
   }
   render() {
     return (
@@ -34,4 +38,10 @@ class CreateDay extends Component {
   }
 }
 
-export default CreateDay
+const mapStateToProps = (dispatch) => {
+  return {
+    createDay: (day) => dispatch(createDay(day))
+  }
+}
+
+export default connect(null, mapStateToProps)(CreateDay)

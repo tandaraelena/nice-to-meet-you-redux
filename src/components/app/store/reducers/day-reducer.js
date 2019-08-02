@@ -7,6 +7,10 @@ const initState = {
 }
 
 const dayReducer = (state = initState, action) => {
+  switch (action.type) {
+    case "CREATE_DAY":
+      console.log("create day", action.day)
+  }
   return state
 }
 
