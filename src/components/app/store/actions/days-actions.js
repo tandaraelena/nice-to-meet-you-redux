@@ -1,5 +1,5 @@
 const createDay = (day) => {
-  return (dispatch, getState) => {
+  return (dispatch, getState, {getFirebase, getFirestore}) => {
     dispatch({ type: "CREATE_DAY", day })
   }
 }
