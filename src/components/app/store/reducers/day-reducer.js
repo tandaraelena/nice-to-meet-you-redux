@@ -10,8 +10,12 @@ const dayReducer = (state = initState, action) => {
   switch (action.type) {
     case "CREATE_DAY":
       console.log("create day", action.day)
+      return state
+    case 'CREATE_DAY_ERROR':
+      console.log('create day error:', action.error)
+    default:
+      return state
   }
-  return state
 }
 
 export default dayReducer
