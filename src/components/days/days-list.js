@@ -1,7 +1,7 @@
 import React from 'react'
 import DayItem from './day-item'
 
-const DaysList = ({ days }) => {
+const DaysList = ({ days: { days } }) => {
   return (
     <div >
       {days && days.map(day => {

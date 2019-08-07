@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import DaysList from '../days/days-list';
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
+import { firestoreConnect } from 'react-redux-firebase'
+import { compose } from 'redux'
 
 class Home extends Component {
   render() {
@@ -16,9 +18,15 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    days: state.day.days
+    days: state.firestore.ordered
   }
 }
 
-export default connect(mapStateToProps)(Home)
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'days' }
+  ])
+)(Home)

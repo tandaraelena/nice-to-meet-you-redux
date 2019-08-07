@@ -5,8 +5,8 @@ import { Paper } from '@material-ui/core'
 const DayItem = ({ day }) => {
   return (
     <Paper>
-      <span>Day number: {day.id}</span>
-      <span>Day Description: {day.dayDescription}</span>
+      <span>Day number: {day.dayNo}</span>
+      <span>Day Description: {day.description}</span>
     </Paper>
   )
 }
