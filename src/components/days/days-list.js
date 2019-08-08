@@ -1,12 +1,15 @@
 import React from 'react'
 import DayItem from './day-item'
+import { Link } from 'react-router-dom'
 
 const DaysList = ({ days: { days } }) => {
   return (
-    <div >
+    <div className='days-list'>
       {days && days.map(day => {
         return (
-          <DayItem day={day} key={day.id}/>
+          <Link to={'/day/' + day.id} key={day.id}>
+            <DayItem day={day} key={day.id}/>
+          </Link>
         )}
       )}
     </div>
