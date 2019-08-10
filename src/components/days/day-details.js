@@ -2,9 +2,7 @@ import React from 'react'
 import { Paper } from '@material-ui/core'
 
 
-const DayDetails = (props) => {
-  console.log(props)
-  const { day } = this.props
+const DayDetails = ({day}) => {
   return (
     <Paper>
       <span>Day number: {day.dayNo}</span>
