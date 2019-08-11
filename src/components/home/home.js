@@ -8,6 +8,7 @@ class Home extends Component {
   render() {
     console.log(this.props);
     const { days } = this.props 
+
     return (
       <div>
         <h3>Home</h3>
@@ -20,7 +21,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    days: state.firestore.ordered
+    days: state.firestore.ordered.days
   }
 }
 

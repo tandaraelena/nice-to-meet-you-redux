@@ -14,8 +14,8 @@ import firebaseConfig from './config/fb.config'
 const store = createStore(rootReducer, 
   compose(
     applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-    reduxFirestore(firebaseConfig),
-    reactReduxFirebase(firebaseConfig)
+    reduxFirestore(firebaseConfig), // redux binding for firestore
+    reactReduxFirebase(firebaseConfig) // redux binding for firebase
   ))
 console.log(store.getState())
 
