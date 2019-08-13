@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import createDay from '../app/store/actions/days-actions'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 
 
 class CreateDay extends Component {
@@ -19,6 +20,10 @@ class CreateDay extends Component {
     // console.log(this.state)
   }
   render() {
+    const { auth } = this.props
+    console.warn(this.props)
+    if (!auth.uid) return <Redirect to='/'/>
+
     return (
       <div className='container' >
         <form onSubmit={this.handleSubmit} className='white'>
@@ -38,10 +43,16 @@ class CreateDay extends Component {
   }
 }
 
-const mapStateToProps = (dispatch) => {
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
   return {
     createDay: (day) => dispatch(createDay(day))
   }
 }
 
-export default connect(null, mapStateToProps)(CreateDay)
+export default connect(mapStateToProps, mapDispatchToProps)(CreateDay)

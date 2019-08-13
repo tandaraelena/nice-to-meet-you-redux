@@ -21,7 +21,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   console.log(state)
   return {
-    days: state.firestore.ordered.days
+    days: state.firestore.ordered.days,
   }
 }
 
