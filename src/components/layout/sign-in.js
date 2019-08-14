@@ -9,7 +9,7 @@ const SignedInLinks = (props) => {
     <SignedInLinksStyled>
       <NavLink to='/create-day' >Add</NavLink>
       <a onClick={props.signOut} style={{cursor: 'pointer'}}>Log Out</a>
-      <NavLink to='/' >ET</NavLink>
+      <NavLink to='/' >{props.profile.initials}</NavLink>
     </SignedInLinksStyled>
   )
 }
