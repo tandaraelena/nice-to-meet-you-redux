@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom'
 class CreateDay extends Component {
   state = {
     dayNo: '',
+    subtitle: '',
     description: '',
   }
   handleChange = (e) => {
@@ -21,8 +22,9 @@ class CreateDay extends Component {
   }
   render() {
     const { auth } = this.props
-    console.warn(this.props)
+    console.log(this.props)
     if (!auth.uid) return <Redirect to='/'/>
+    // if (auth.createdAt) return <Redirect to='/'/>
 
     return (
       <div className='container' >
@@ -31,6 +33,10 @@ class CreateDay extends Component {
           <div className='input-field'>
             <label htmlFor='dayNo'>Day Number</label>
             <input type='text' id='dayNo' onChange={this.handleChange} />
+          </div>
+          <div className='input-field'>
+            <label htmlFor='subtitle'>Subtitle</label>
+            <input type='text' id='subtitle' onChange={this.handleChange} />
           </div>
           <div className='input-field'>
             <label htmlFor='description'>Description</label>
