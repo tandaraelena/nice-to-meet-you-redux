@@ -1,5 +1,6 @@
 import React from 'react'
 import { Paper } from '@material-ui/core'
+import moment from 'moment'
 
 const DayItem = ({day}) => {
   console.log(day)
@@ -9,7 +10,7 @@ const DayItem = ({day}) => {
       <div>Day title: {' ' + day.subtitle} </div>
       <div>Day Description: {' ' + day.description} </div>
       <i>Created by: {day.userName}</i>
-      {/* <>{day.createdAt.Timestamp.seconds}</> */}
+      <div>{moment(day.createdAt.toDate().toString()).format('lll')}</div>
     </Paper>
   )
 }
