@@ -12,7 +12,6 @@ class Home extends Component {
 
     return (
       <StyledHomePage>
-        <div className='box-example'>Home</div>
         <DaysList days={days} />
       </StyledHomePage>
     )

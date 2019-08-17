@@ -22,7 +22,7 @@ export const SignedInLinksStyled = styled.span`
 
 export const StyledHeader = styled.div`
   margin: 0;
-  height: 60vh;
+  height: 300px;
   width: 100%;
   position: relative;
   display: grid;

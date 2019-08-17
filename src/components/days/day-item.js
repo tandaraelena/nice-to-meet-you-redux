@@ -1,17 +1,16 @@
 import React from 'react'
-import { Paper } from '@material-ui/core'
 import moment from 'moment'
+import { StyledDayItem } from './days.style';
 
 const DayItem = ({day}) => {
   console.log(day)
   return (
-    <Paper style={{marginBottom: '30px'}}>
-      <div>Day number: {' ' + day.dayNo} </div>
-      <div>Day title: {' ' + day.subtitle} </div>
-      <div>Day Description: {' ' + day.description} </div>
-      <i>Created by: {day.userName}</i>
-      <div>{moment(day.createdAt.toDate().toString()).format('lll')}</div>
-    </Paper>
+    <StyledDayItem>
+      <div>{'#' + day.dayNo} {' ' + day.subtitle}</div>
+      <div> {' ' + day.description} </div>
+      <i style={{float: 'left'}}>Created by: {day.userName}</i>
+      <div style={{float: 'right'}}>{moment(day.createdAt.toDate().toString()).format('lll')}</div>
+    </StyledDayItem>
   )
 }
 
