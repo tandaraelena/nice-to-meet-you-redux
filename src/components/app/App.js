@@ -5,6 +5,7 @@ import Home from '../home/home';
 import SignIn from '../auth/sign-in';
 import SignUp from '../auth/sign-up';
 import CreateDay from '../days/create-day';
+import Header from '../layout/header';
 
 class App extends Component {
   render () {
@@ -12,6 +13,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Navbar/>
+          <Header/>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/sign-in' component={SignIn} />

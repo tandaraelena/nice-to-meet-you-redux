@@ -2,19 +2,19 @@ import styled from 'styled-components'
 
 export const NavbarStyled = styled.div`
   width: 100%;
-  /* height: 20px; */
-  background-color: black;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgba(255, 0, 0, 0.3);
+  padding: 5px; 
+
   a {
     color: white;
-    padding: 5px; 
   }
 `
 
 export const SignedInLinksStyled = styled.span`
-  display: flex;
-  flex-direction: row;
-  color: blue;
+  text-align: right;
+
   a {
     padding: 5px;
   }
